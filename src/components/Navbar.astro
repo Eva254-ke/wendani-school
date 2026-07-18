@@ -1,0 +1,79 @@
+---
+// Navbar component - clean HTML only, no inline styles
+---
+
+<header class="navbar">
+  <div class="navbar__container">
+    
+    <!-- Brand / Logo -->
+    <a href="/" class="navbar__brand">
+      <img src="/logo.png" alt="Good News CEC Logo" class="navbar__logo" />
+      <span>Good News CEC</span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="navbar__desktop" aria-label="Main Navigation">
+      <ul class="navbar__list">
+        <li><a href="/" class="navbar__link">Home</a></li>
+        <li><a href="/about" class="navbar__link">About Us</a></li>
+        <li><a href="/admissions" class="navbar__link">Admissions</a></li>
+        <li><a href="/contact" class="navbar__link">Contact</a></li>
+      </ul>
+      <a href="/admissions" class="btn btn--primary">Enroll Now</a>
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <button 
+      class="navbar__toggle" 
+      aria-expanded="false" 
+      aria-controls="mobile-menu"
+      aria-label="Toggle navigation menu"
+    >
+      <svg class="navbar__toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+
+    <!-- Mobile Navigation Menu -->
+    <nav id="mobile-menu" class="navbar__mobile" aria-label="Mobile Navigation">
+      <ul class="navbar__mobile-list">
+        <li><a href="/" class="navbar__mobile-link">Home</a></li>
+        <li><a href="/about" class="navbar__mobile-link">About Us</a></li>
+        <li><a href="/admissions" class="navbar__mobile-link">Admissions</a></li>
+        <li><a href="/contact" class="navbar__mobile-link">Contact</a></li>
+        <li class="navbar__mobile-cta">
+          <a href="/admissions" class="btn btn--primary btn--full">Enroll Now</a>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+<script>
+  // Minimal vanilla JS for mobile menu toggle
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.querySelector('.navbar__toggle');
+    const mobileMenu = document.querySelector('.navbar__mobile');
+
+    if (toggleBtn && mobileMenu) {
+      toggleBtn.addEventListener('click', () => {
+        const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+        
+        toggleBtn.setAttribute('aria-expanded', String(!isExpanded));
+        mobileMenu.classList.toggle('is-open');
+      });
+
+      // Close menu when clicking a link
+      const mobileLinks = mobileMenu.querySelectorAll('a');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          toggleBtn.setAttribute('aria-expanded', 'false');
+          mobileMenu.classList.remove('is-open');
+        });
+      });
+    }
+  });
+</script>

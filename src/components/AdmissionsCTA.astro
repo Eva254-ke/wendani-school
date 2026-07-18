@@ -1,0 +1,38 @@
+---
+// Admissions Call-to-Action Section
+---
+
+<section class="cta">
+  <div class="cta__container">
+    <div class="cta__box fade-in-section">
+
+      <p class="cta__label">Admissions Open</p>
+      <h2 class="cta__title">Ready to Join the Good News Family?</h2>
+      <p class="cta__text">
+        Admissions are open for the upcoming term. Visit our school, meet our teachers,
+        and see why parents in Kahawa Wendani trust us with their children's education.
+      </p>
+
+      <div class="cta__buttons">
+        <a href="/admissions" class="btn btn--white">Start Application</a>
+        <a href="/contact" class="btn btn--outline-white">Schedule a Visit</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.cta .fade-in-section').forEach(el => observer.observe(el));
+  });
+</script>

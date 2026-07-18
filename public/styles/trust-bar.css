@@ -1,0 +1,98 @@
+/* ============ TRUST BAR ============ */
+.trust-bar {
+  background-color: var(--color-bg-white);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-8) 0;
+}
+
+@media (min-width: 640px) {
+  .trust-bar { padding: var(--space-12) 0; }
+}
+
+.trust-bar__container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-5);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+@media (min-width: 640px) {
+  .trust-bar__container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+    padding: 0 var(--space-6);
+  }
+}
+
+.trust-bar__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  gap: var(--space-4);
+  background-color: var(--color-bg-section);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-4) var(--space-5);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+@media (min-width: 640px) {
+  .trust-bar__item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--space-8) var(--space-6);
+  }
+  .trust-bar__item:hover {
+    border-color: var(--color-primary-light);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+}
+
+.trust-bar__icon-wrap {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  background-color: rgba(15, 118, 110, 0.1);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+@media (min-width: 640px) {
+  .trust-bar__icon-wrap { width: 52px; height: 52px; min-width: 52px; border-radius: var(--radius-lg); }
+}
+
+.trust-bar__icon {
+  width: 22px;
+  height: 22px;
+  color: var(--color-primary);
+}
+
+@media (min-width: 640px) { .trust-bar__icon { width: 26px; height: 26px; } }
+
+.trust-bar__body { display: flex; flex-direction: column; gap: 2px; }
+
+@media (min-width: 640px) { .trust-bar__body { align-items: center; } }
+
+.trust-bar__title {
+  font-family: var(--font-heading);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin: 0;
+}
+
+.trust-bar__text {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  line-height: 1.5;
+  margin: 0;
+}

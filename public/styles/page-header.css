@@ -1,0 +1,44 @@
+/* ============ PAGE HEADER ============ */
+.page-header {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #0D5F58 60%, var(--color-accent) 100%);
+  padding: var(--space-16) 0 var(--space-12);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+  pointer-events: none;
+}
+
+.page-header__container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  position: relative;
+}
+
+.page-header__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.02em;
+}
+
+.page-header__subtitle {
+  font-size: 1.0625rem;
+  color: rgba(255,255,255,0.8);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.7;
+}

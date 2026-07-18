@@ -1,46 +1,85 @@
-# Astro Starter Kit: Basics
+# Good News Community Education Centre — Website
 
-```sh
-npm create astro@latest -- --template basics
+Official website for **Good News CEC**, a primary school in Kahawa Wendani, Nairobi, Kenya.
+
+Built with [Astro](https://astro.build) — fast, static, mobile-first.
+
+---
+
+## Tech Stack
+
+- **Framework:** Astro (static site generation)
+- **Styling:** Vanilla CSS with design tokens (no Tailwind, no frameworks)
+- **Fonts:** Lexend + Source Sans 3 (Google Fonts)
+- **Design:** Professional teal/blue palette, mobile-first, no glassmorphism
+
+---
+
+## Pages
+
+| Route | Description |
+|---|---|
+| `/` | Home — Hero, Trust Bar, Features, Headteacher, CTA |
+| `/about` | About Us — Mission, Vision, Core Values |
+| `/admissions` | Admissions — Steps, Required Documents |
+| `/contact` | Contact — Info, Map, Contact Form |
+
+---
+
+## Project Structure
+
 ```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
+squalid-spectrum/
 ├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
+│   ├── images/
+│   ├── styles/          # All CSS files (design tokens in global.css)
+│   ├── logo.png
+│   └── hero.png
+├── src/
+│   ├── components/      # Astro components per section
+│   ├── layouts/
+│   │   └── Layout.astro # Root layout with Navbar + Footer
+│   └── pages/           # index, about, admissions, contact
+├── astro.config.mjs
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+---
 
-## 🧞 Commands
+## Getting Started
 
-All commands are run from the root of the project, from a terminal:
+```bash
+# Install dependencies
+npm install
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+# Start dev server at localhost:4321
+npm run dev
 
-## 👀 Want to learn more?
+# Build for production
+npm run build
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+# Preview production build
+npm run preview
+```
+
+---
+
+## Design Constraints
+
+- No glassmorphism / no `backdrop-filter`
+- No CSS frameworks — pure design tokens
+- Mobile-first breakpoints: 375 → 640 → 768 → 1024 → 1200px
+- Touch targets ≥ 44px on all interactive elements
+- `prefers-reduced-motion` respected on all animations
+
+---
+
+## Deployment
+
+Static output in `./dist/` — deploy to any static host (Netlify, Vercel, GitHub Pages, etc.).
+
+---
+
+## License
+
+© Good News Community Education Centre. All rights reserved.

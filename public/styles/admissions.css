@@ -1,0 +1,97 @@
+/* ============ ADMISSIONS PAGE ============ */
+.admissions-section {
+  padding: var(--space-20) 0;
+  background-color: var(--color-bg-white);
+}
+
+.admissions__container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.admissions__step {
+  display: flex;
+  gap: var(--space-5);
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-8);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.admissions__step:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.admissions__step-number {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
+}
+
+.admissions__step-content h3 {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin-bottom: var(--space-2);
+}
+
+.admissions__step-content p {
+  font-size: 0.9375rem;
+  color: var(--color-text-light);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.admissions__requirements {
+  background-color: var(--color-bg-section);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  margin-top: var(--space-12);
+}
+
+.admissions__requirements h3 {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin-bottom: var(--space-6);
+}
+
+.admissions__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.admissions__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  color: var(--color-text);
+  font-size: 0.9375rem;
+}
+
+.admissions__list li svg {
+  width: 18px;
+  height: 18px;
+  color: var(--color-primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}

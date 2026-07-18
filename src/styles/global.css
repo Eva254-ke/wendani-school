@@ -1,0 +1,257 @@
+/* ============================================
+   GOOD NEWS CEC — Design System
+   Style: Trust & Authority | Clean Professional
+   Fonts: Lexend (headings) + Source Sans 3 (body)
+   ============================================ */
+
+:root {
+  /* Brand Colors */
+  --color-primary:       #1B3A6B;   /* Deep navy — trust, authority */
+  --color-primary-dark:  #122850;
+  --color-primary-light: #2A5298;
+  --color-accent:        #16A34A;   /* Green — growth, community */
+  --color-accent-dark:   #15803D;
+  --color-secondary:     #F59E0B;   /* Amber — warmth, highlight */
+
+  /* Text */
+  --color-text-dark:     #0F172A;
+  --color-text:          #1E293B;
+  --color-text-light:    #64748B;
+  --color-text-muted:    #94A3B8;
+
+  /* Surfaces */
+  --color-bg-white:      #FFFFFF;
+  --color-bg-light:      #F8FAFC;
+  --color-bg-section:    #F1F5F9;
+  --color-border:        #E2E8F0;
+  --color-border-strong: #CBD5E1;
+
+  /* Typography */
+  --font-heading: 'Lexend', system-ui, sans-serif;
+  --font-body:    'Source Sans 3', system-ui, sans-serif;
+
+  /* Spacing (8pt grid) */
+  --space-1:  0.25rem;   /* 4px */
+  --space-2:  0.5rem;    /* 8px */
+  --space-3:  0.75rem;   /* 12px */
+  --space-4:  1rem;      /* 16px */
+  --space-5:  1.25rem;   /* 20px */
+  --space-6:  1.5rem;    /* 24px */
+  --space-8:  2rem;      /* 32px */
+  --space-10: 2.5rem;    /* 40px */
+  --space-12: 3rem;      /* 48px */
+  --space-16: 4rem;      /* 64px */
+  --space-20: 5rem;      /* 80px */
+  --space-24: 6rem;      /* 96px */
+
+  /* Layout */
+  --container-max: 1200px;
+  --container-narrow: 800px;
+
+  /* Radius */
+  --radius-sm:  4px;
+  --radius-md:  8px;
+  --radius-lg:  12px;
+  --radius-xl:  16px;
+
+  /* Shadows — clean, no blur-heavy effects */
+  --shadow-xs:  0 1px 2px rgba(0,0,0,0.06);
+  --shadow-sm:  0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md:  0 4px 6px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.04);
+  --shadow-lg:  0 10px 15px rgba(0,0,0,0.08), 0 4px 6px rgba(0,0,0,0.04);
+
+  /* Transitions */
+  --transition-fast:   150ms ease;
+  --transition-base:   200ms ease;
+  --transition-slow:   300ms ease;
+}
+
+/* ============ RESET ============ */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color-text);
+  background-color: var(--color-bg-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============ TYPOGRAPHY ============ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-text-dark);
+  margin-bottom: var(--space-4);
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 800; }
+h2 { font-size: clamp(1.5rem, 3.5vw, 2.25rem); }
+h3 { font-size: clamp(1.125rem, 2.5vw, 1.5rem); }
+
+p {
+  margin-bottom: var(--space-4);
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover { color: var(--color-primary-dark); }
+
+ul { list-style: none; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============ LAYOUT ============ */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+main { min-height: 70vh; }
+
+/* ============ BUTTONS ============ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 0.7rem 1.5rem;
+  font-family: var(--font-heading);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color var(--transition-base),
+              color var(--transition-base),
+              border-color var(--transition-base),
+              box-shadow var(--transition-base),
+              transform var(--transition-fast);
+  white-space: nowrap;
+  min-height: 44px; /* touch target */
+}
+
+.btn:active { transform: translateY(1px); }
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  border-color: var(--color-primary);
+}
+.btn--primary:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-md);
+}
+
+.btn--accent {
+  background-color: var(--color-accent);
+  color: #FFFFFF;
+  border-color: var(--color-accent);
+}
+.btn--accent:hover {
+  background-color: var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
+  color: #FFFFFF;
+}
+
+.btn--secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.btn--secondary:hover {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+}
+
+.btn--white {
+  background-color: #FFFFFF;
+  color: var(--color-primary);
+  border-color: #FFFFFF;
+}
+.btn--white:hover {
+  background-color: var(--color-bg-light);
+  color: var(--color-primary-dark);
+}
+
+.btn--outline-white {
+  background-color: transparent;
+  color: #FFFFFF;
+  border-color: rgba(255,255,255,0.7);
+}
+.btn--outline-white:hover {
+  background-color: rgba(255,255,255,0.12);
+  border-color: #FFFFFF;
+}
+
+.btn--full { width: 100%; }
+
+/* ============ SECTION BADGE ============ */
+.section-badge {
+  display: inline-block;
+  background-color: rgba(27, 58, 107, 0.08);
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.875rem;
+  border-radius: 100px;
+  margin-bottom: var(--space-4);
+}
+
+/* ============ SECTION HEADER ============ */
+.section-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto var(--space-12);
+}
+
+.section-header__title {
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin-bottom: var(--space-4);
+}
+
+.section-header__subtitle {
+  font-size: 1.0625rem;
+  color: var(--color-text-light);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ============ DIVIDER ============ */
+.section-divider {
+  width: 48px;
+  height: 3px;
+  background-color: var(--color-accent);
+  border-radius: 2px;
+  margin: var(--space-4) auto 0;
+}

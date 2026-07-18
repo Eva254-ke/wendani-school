@@ -1,0 +1,110 @@
+/* ============ ADMISSIONS CTA ============ */
+.cta {
+  padding: var(--space-16) 0;
+  background-color: var(--color-bg-white);
+}
+
+@media (min-width: 768px) { .cta { padding: var(--space-24) 0; } }
+
+.cta__container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-5);
+}
+
+@media (min-width: 768px) { .cta__container { padding: 0 var(--space-6); } }
+
+.cta__box {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #0D5F58 60%, var(--color-accent) 100%);
+  border-radius: var(--radius-xl);
+  padding: var(--space-12) var(--space-6);
+  text-align: center;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+@media (min-width: 768px) {
+  .cta__box {
+    border-radius: var(--radius-2xl);
+    padding: var(--space-24) var(--space-20);
+    box-shadow: var(--shadow-xl);
+  }
+}
+
+.cta__box::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+  pointer-events: none;
+}
+
+.cta__box::after {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  left: -30px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.04);
+  pointer-events: none;
+}
+
+.cta__label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: var(--space-3);
+  position: relative;
+  z-index: 1;
+}
+
+.cta__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 6vw, 2.75rem);
+  font-weight: 800;
+  margin-bottom: var(--space-4);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  position: relative;
+  z-index: 1;
+}
+
+.cta__text {
+  font-size: 0.9375rem;
+  opacity: 0.88;
+  max-width: 540px;
+  margin: 0 auto var(--space-8);
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 768px) { .cta__text { font-size: 1.0625rem; margin-bottom: var(--space-10); } }
+
+.cta__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 360px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 480px) {
+  .cta__buttons { flex-direction: row; justify-content: center; max-width: 400px; }
+}
