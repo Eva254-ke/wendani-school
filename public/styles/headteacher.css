@@ -88,7 +88,7 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  background-color: rgba(15, 118, 110, 0.1);
+  background-color: rgba(27, 82, 152, 0.1);
   color: var(--color-primary);
   font-family: var(--font-heading);
   font-size: 0.75rem;
@@ -98,7 +98,7 @@
   padding: 0.35rem 0.875rem;
   border-radius: 100px;
   margin-bottom: var(--space-4);
-  border: 1px solid rgba(15,118,110,0.2);
+  border: 1px solid rgba(27, 82, 152, 0.2);
 }
 
 .headteacher__title {

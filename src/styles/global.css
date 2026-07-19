@@ -255,3 +255,15 @@ main { min-height: 70vh; }
   border-radius: 2px;
   margin: var(--space-4) auto 0;
 }
+
+/* Animation - used across components */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,24 +1,40 @@
 ---
-// Admissions Call-to-Action Section
+// Admissions Call-to-Action Section - Professional & Trust-Building
 ---
 
-<section class="cta">
-  <div class="cta__container">
-    <div class="cta__box fade-in-section">
+<section class="admissions-cta">
+  <div class="admissions-cta__container">
 
-      <p class="cta__label">Admissions Open</p>
-      <h2 class="cta__title">Ready to Join the Good News Family?</h2>
-      <p class="cta__text">
+    <div class="admissions-cta__content fade-in-section">
+
+      <span class="admissions-cta__badge">Admissions Open</span>
+
+      <h2 class="admissions-cta__title">Ready to Join the Good News Family?</h2>
+
+      <p class="admissions-cta__text">
         Admissions are open for the upcoming term. Visit our school, meet our teachers,
         and see why parents in Kahawa Wendani trust us with their children's education.
       </p>
 
-      <div class="cta__buttons">
-        <a href="/admissions" class="btn btn--white">Start Application</a>
-        <a href="/contact" class="btn btn--outline-white">Schedule a Visit</a>
+      <div class="admissions-cta__actions">
+        <a href="/admissions" class="btn btn--primary btn--lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12 6.477 20 12 20z"></path>
+            <path d="M12 8v8"></path>
+            <path d="M8 12h8"></path>
+          </svg>
+          Start Application
+        </a>
+        <a href="/contact" class="btn btn--outline btn--lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          Schedule a Visit
+        </a>
       </div>
 
     </div>
+
   </div>
 </section>
 
@@ -33,6 +49,6 @@
   }, { threshold: 0.1 });
 
   document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.cta .fade-in-section').forEach(el => observer.observe(el));
+    document.querySelectorAll('.admissions-cta .fade-in-section').forEach(el => observer.observe(el));
   });
 </script>

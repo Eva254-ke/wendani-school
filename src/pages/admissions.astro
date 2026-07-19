@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import PageHeader from '../components/PageHeader.astro';
 ---
 
-<Layout title="Admissions">
+<Layout title="Admissions" description="Enroll your child at Good News CEC, Kahawa Wendani. Simple 3-step CBC admissions process for PP1 to Grade 6. Call +254 722 420 147 to get started.">
   <PageHeader 
     title="Admissions" 
     subtitle="Join the Good News CEC family. Our enrollment process is simple, transparent, and designed to welcome your child."
@@ -11,6 +11,28 @@ import PageHeader from '../components/PageHeader.astro';
 
   <section class="admissions-section">
     <div class="admissions__container">
+      
+      <!-- Real School Admissions & Activities Showcase -->
+      <div class="admissions__gallery fade-in-section" style="margin-bottom: 3rem; display: grid; grid-template-columns: 1fr; gap: var(--space-4);">
+        <img 
+          src="https://scontent-mba2-1.xx.fbcdn.net/v/t39.30808-6/482030454_567966999626055_2329562820039471331_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x922&ctp=s2048x922&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFQ8Goq4dwm3MpfYci_OUmWwb9e7XvAPtrBv17te8A-2nAewnmla2JbXwd7vbCCisTSHqKnLTD6Stv3mpejCMvq&_nc_ohc=r5gMT08BCFsQ7kNvwFIM3Mh&_nc_oc=AdqdL_w_vQWQ9_BnRbCLScfpDIaCNdlRSqKP36BUAQ0L88UvRH-SSNw0B4oKy0ez-38&_nc_zt=23&_nc_ht=scontent-mba2-1.xx&_nc_gid=v4DdEVQWlk7FuR72a1kSUQ&_nc_ss=7b2a8&oh=00_AQB_o2kVtmUnUKYx5gglj7NpCJrZLHVgdM6xzVLGKTfZJA&oe=6A628AC1" 
+          alt="Good News CEC students studying" 
+          style="width: 100%; height: auto; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); object-fit: cover; max-height: 250px; display: block;"
+        />
+        <img 
+          src="https://scontent-mba2-1.xx.fbcdn.net/v/t39.30808-6/484002083_566366319786123_2675404959054142535_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x922&ctp=s2048x922&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG8Lth0YlW3dETfiyzSD---GXsJjudmZT8ZewmO52ZlP-yXd2-mwsXe2GZUvL1LaLjNn_ZZgdD_HkIdEu8qTDyg&_nc_ohc=gS1evOpK7wcQ7kNvwGfG6uA&_nc_oc=Adp6MgOl8L_f7b7tnGiHcz-XtD4T2-GNShl_huhOpne2T1xY3vaTXrHBGiQzOTABZTw&_nc_zt=23&_nc_ht=scontent-mba2-1.xx&_nc_gid=WnzZodaqsSUlz-rlYgg9tw&_nc_ss=7b2a8&oh=00_AQDtzJQT4D9pBKioplIElZB9BmqM4RSm6l5w_O_BhiebVw&oe=6A6293F7" 
+          alt="Good News CEC classrooms and events" 
+          style="width: 100%; height: auto; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); object-fit: cover; max-height: 250px; display: block;"
+        />
+      </div>
+
+      <style>
+        @media (min-width: 640px) {
+          .admissions__gallery {
+            grid-template-columns: 1fr 1fr !important;
+          }
+        }
+      </style>
       
       <!-- Steps -->
       <div class="admissions__step fade-in-section">

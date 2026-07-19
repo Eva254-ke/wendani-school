@@ -1,110 +1,104 @@
 /* ============ ADMISSIONS CTA ============ */
-.cta {
+.admissions-cta {
+  background-color: var(--color-bg-section);
   padding: var(--space-16) 0;
-  background-color: var(--color-bg-white);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
 }
 
-@media (min-width: 768px) { .cta { padding: var(--space-24) 0; } }
+@media (min-width: 768px) { .admissions-cta { padding: var(--space-20) 0; } }
 
-.cta__container {
+.admissions-cta__container {
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: 0 var(--space-5);
+  padding: 0 var(--space-6);
 }
 
-@media (min-width: 768px) { .cta__container { padding: 0 var(--space-6); } }
-
-.cta__box {
-  background: linear-gradient(135deg, var(--color-primary) 0%, #0D5F58 60%, var(--color-accent) 100%);
-  border-radius: var(--radius-xl);
-  padding: var(--space-12) var(--space-6);
+.admissions-cta__content {
   text-align: center;
-  color: #FFFFFF;
+  padding: var(--space-8) 0;
   position: relative;
   overflow: hidden;
-  box-shadow: var(--shadow-lg);
 }
 
 @media (min-width: 768px) {
-  .cta__box {
-    border-radius: var(--radius-2xl);
-    padding: var(--space-24) var(--space-20);
-    box-shadow: var(--shadow-xl);
+  .admissions-cta__content {
+    padding: var(--space-12) 0;
   }
 }
 
-.cta__box::before {
-  content: '';
-  position: absolute;
-  top: -60px;
-  right: -60px;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.05);
-  pointer-events: none;
-}
-
-.cta__box::after {
-  content: '';
-  position: absolute;
-  bottom: -60px;
-  left: -30px;
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.04);
-  pointer-events: none;
-}
-
-.cta__label {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
+.admissions-cta__badge {
+  display: inline-block;
+  background-color: rgba(22, 163, 74, 0.08);
+  color: var(--color-accent-dark);
+  border: 1px solid rgba(22, 163, 74, 0.2);
   font-family: var(--font-heading);
   font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.75);
-  margin-bottom: var(--space-3);
-  position: relative;
-  z-index: 1;
+  padding: 0.4rem 1.2rem;
+  border-radius: 100px;
+  margin-bottom: var(--space-5);
 }
 
-.cta__title {
+.admissions-cta__title {
   font-family: var(--font-heading);
-  font-size: clamp(1.5rem, 6vw, 2.75rem);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
   font-weight: 800;
+  color: var(--color-text-dark);
   margin-bottom: var(--space-4);
-  line-height: 1.15;
-  letter-spacing: -0.025em;
-  position: relative;
-  z-index: 1;
+  line-height: 1.2;
 }
 
-.cta__text {
-  font-size: 0.9375rem;
-  opacity: 0.88;
-  max-width: 540px;
-  margin: 0 auto var(--space-8);
+.admissions-cta__text {
+  font-size: 1.05rem;
+  color: var(--color-text-light);
   line-height: 1.7;
-  position: relative;
-  z-index: 1;
+  margin-bottom: var(--space-8);
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-@media (min-width: 768px) { .cta__text { font-size: 1.0625rem; margin-bottom: var(--space-10); } }
-
-.cta__buttons {
+.admissions-cta__actions {
   display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-  max-width: 360px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  justify-content: center;
 }
 
-@media (min-width: 480px) {
-  .cta__buttons { flex-direction: row; justify-content: center; max-width: 400px; }
+.btn--lg {
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  min-height: 48px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .admissions-cta {
+    padding: var(--space-12) var(--space-4);
+  }
+
+  .admissions-cta__content {
+    padding: var(--space-8) var(--space-4);
+  }
+
+  .admissions-cta__actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .admissions-cta__actions .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .admissions-cta__actions {
+    gap: var(--space-3);
+  }
 }

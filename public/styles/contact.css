@@ -38,7 +38,7 @@
 .contact__info-icon {
   width: 44px;
   height: 44px;
-  background: rgba(15,118,110,0.1);
+  background: rgba(27, 82, 152, 0.1);
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
@@ -103,7 +103,7 @@
 .form-textarea:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.12);
+  box-shadow: 0 0 0 3px rgba(27, 82, 152, 0.12);
 }
 
 .form-textarea {

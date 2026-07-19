@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import PageHeader from '../components/PageHeader.astro';
 ---
 
-<Layout title="About Us">
+<Layout title="About Us" description="Learn about Good News CEC — our mission, vision, and core values. A trusted CBC primary school serving Kahawa Wendani, Nairobi since establishment.">
   <PageHeader 
     title="About Good News CEC" 
     subtitle="Dedicated to providing quality, values-based education to the Kahawa Wendani community since our establishment."
@@ -11,6 +11,17 @@ import PageHeader from '../components/PageHeader.astro';
 
   <section class="about-section">
     <div class="about__container">
+      
+      <!-- Real School Image Showcase -->
+      <div class="about__image-showcase fade-in-section" style="margin-bottom: 3.5rem;">
+        <img 
+          src="https://scontent-mba2-1.xx.fbcdn.net/v/t39.30808-6/471239798_508654015557354_4857389659392964897_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s2048x1536&_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeEOhIda6k0kcVNzhfKuPJEOkVSBD0hLKQCRVIEPSEspAKUTvnsYp558BOKU8dbL0GBEaPEx3H3h7hHQMaiY1dOv&_nc_ohc=OooK5t482a4Q7kNvwFjdrM2&_nc_oc=AdrfX3OKuJvhvCkuEo9PUOzjhP1qxXLQ1oLj4rdJ1YebuCAuQD_mSgQUcHjMj1AF1dA&_nc_zt=23&_nc_ht=scontent-mba2-1.xx&_nc_gid=-M4LoVUuRS4qmRnaDrPdgw&_nc_ss=7b2a8&oh=00_AQAy4jPEgas66QsxNCnYA391vBTEloLw3bH1DNdvgqmkSw&oe=6A6283A0" 
+          alt="Good News Community Education Centre students and activities" 
+          class="about__featured-image"
+          style="width: 100%; height: auto; border-radius: var(--radius-xl); box-shadow: var(--shadow-md); object-fit: cover; max-height: 480px; display: block;"
+        />
+      </div>
+
       <div class="about__grid">
         
         <!-- Mission -->
