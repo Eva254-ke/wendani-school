@@ -46,11 +46,13 @@
 }
 
 .trust-bar__grid {
+  position: relative;
   display: flex;
   gap: var(--space-4);
   overflow-x: auto;
   overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
   padding: 0 var(--space-5) var(--space-2);
   scrollbar-width: none;
 }
@@ -147,6 +149,21 @@
   color: var(--color-text);
   line-height: 1.45;
   margin: 0;
+}
+
+@media (max-width: 767px) {
+  .trust-bar__container { position: relative; }
+
+  .trust-bar__container::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: var(--space-2);
+    width: 56px;
+    height: 150px;
+    pointer-events: none;
+    background: linear-gradient(90deg, rgba(248, 250, 252, 0), #f8fafc 78%);
+  }
 }
 
 @media (min-width: 768px) {
