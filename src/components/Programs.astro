@@ -1,0 +1,93 @@
+---
+// Programs Section - Education Programs Offered
+---
+
+<section id="programs" class="programs">
+  <div class="programs__container">
+    
+    <div class="programs__header fade-in-section">
+      <span class="section-label">Our Programs</span>
+      <h2 class="programs__title">Complete Learning Journey</h2>
+      <p class="programs__subtitle">From childcare to Grade 6 — all programs follow the Kenyan CBC curriculum</p>
+    </div>
+
+    <div class="programs__grid">
+      
+      <div class="program-group fade-in-section stagger-1">
+        <h3 class="program-group__title">Daycare Services</h3>
+        <p class="program-group__text">Children 1 year and above. Monday to Friday care with learning-through-play approach.</p>
+        <ul class="program-group__list">
+          <li>Ages: 1 year and above</li>
+          <li>Days: Monday to Friday</li>
+          <li>Hours: 7:00 AM - 5:00 PM</li>
+        </ul>
+      </div>
+
+      <div class="program-group fade-in-section stagger-2">
+        <h3 class="program-group__title">Pre-School</h3>
+        <p class="program-group__text">Foundation years for early learning and development.</p>
+        <ul class="program-group__list">
+          <li>Play Group</li>
+          <li>PP1 (Pre-Primary 1)</li>
+          <li>PP2 (Pre-Primary 2)</li>
+        </ul>
+      </div>
+
+      <div class="program-group fade-in-section stagger-3">
+        <h3 class="program-group__title">Lower Primary</h3>
+        <p class="program-group__text">Grades 1-3 — Building strong foundations in literacy, numeracy and life skills.</p>
+        <ul class="program-group__list">
+          <li>Grade 1</li>
+          <li>Grade 2</li>
+          <li>Grade 3</li>
+        </ul>
+      </div>
+
+      <div class="program-group fade-in-section stagger-4">
+        <h3 class="program-group__title">Middle School</h3>
+        <p class="program-group__text">Grades 4-6 — Developing critical thinking and problem-solving skills.</p>
+        <ul class="program-group__list">
+          <li>Grade 4</li>
+          <li>Grade 5</li>
+          <li>Grade 6</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="programs__extras fade-in-section stagger-5">
+      <h3 class="programs__extras-title">Extra Activities</h3>
+      <div class="programs__extras-grid">
+        <div class="programs__extra">
+          <h4 class="programs__extra-subtitle">Music & Drama</h4>
+          <p>Creative expression through performance, singing, and drama activities for all students.</p>
+        </div>
+        <div class="programs__extra">
+          <h4 class="programs__extra-subtitle">Instrumentals</h4>
+          <p>Hands-on music lessons in Drums, Flute, and Piano.</p>
+          <ul class="programs__instruments">
+            <li>Drums</li>
+            <li>Flute</li>
+            <li>Piano</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.programs .fade-in-section').forEach(el => observer.observe(el));
+  });
+</script>
