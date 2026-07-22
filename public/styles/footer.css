@@ -72,12 +72,6 @@
   margin-bottom: var(--space-4);
 }
 
-.footer__registration {
-  font-size: 0.8rem;
-  color: rgba(255,255,255,0.35);
-  line-height: 1.6;
-  margin: 0;
-}
 
 /* Links */
 .footer__title {
